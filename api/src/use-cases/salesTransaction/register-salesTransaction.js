@@ -16,7 +16,7 @@ const registerSalesTransaction = ({
     const custid = info[0].customer[0].custid;
     const items = info[1];
     const totalPrice = info[2].transactionTotal[0].totalPrice;
-    console.log("LOG FROM USECASES-SALESTRANSACTION-REGISTER: ", items);
+    //console.log("LOG FROM USECASES-SALESTRANSACTION-REGISTER: ", items);
     data = {
       custid: custid,
       totalPrice: totalPrice,

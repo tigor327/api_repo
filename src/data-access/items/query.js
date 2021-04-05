@@ -48,7 +48,7 @@ const itemsQuery = ({ connects, model }) => {
 
   async function updateItem({ data }) {
     try {
-      console.log("info.name from inside query: ", data);
+      //console.log("info.name from inside query: ", data);
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
@@ -73,7 +73,7 @@ const itemsQuery = ({ connects, model }) => {
               supid: data.supid,
               price: data.price,
               quantity: data.quantity,
-              itemStatus: "Active",
+              itemStatus: data.itemStatus,
               barcode: data.barcode,
             },
             {

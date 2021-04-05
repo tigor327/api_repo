@@ -12,15 +12,9 @@ const updateItem = ({ itemsDb, updateItem_ENTITY }) => {
       itemStatus: info.itemStatus,
       id: info.id,
     };
-    const dupeCheck = await itemsDb.checkDupe({ data });
-
-    if (dupeCheck.rowCount > 0) {
-      throw new Error("Name already exists");
-    }
 
     const res = await itemsDb.updateItem({ data });
     let prompt = "";
-    console.log("res count result: ", res.res);
     if (res.res == 1) {
       prompt = "Item updated succesfully!";
     } else {

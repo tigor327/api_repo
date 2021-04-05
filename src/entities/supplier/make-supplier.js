@@ -2,10 +2,7 @@ const isValidName = require("../../helper/isValidName");
 
 const makeSupplier = ({ info }) => {
   // return function make({fullname, contact, address} = {}) {
-  console.log(
-    "INFO SENT FROM ENTITIES SUPPLIER MAKE SUPPLIER: ",
-    info[1].items
-  );
+  console.log("INFO SENT FROM ENTITIES SUPPLIER MAKE SUPPLIER: ", info);
   const { supName, supContact, supAddress } = info;
   const fname = isValidName(supName);
   const supStatus = "Inactive";

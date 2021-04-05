@@ -23,17 +23,11 @@ const updateItem_ENTITY = ({ info }) => {
   if (!description) {
     throw new Error("Provide an item description");
   }
-  if (!supid) {
-    throw new Error("Item supplier id can't be blank!");
-  }
   if (!price) {
     throw new Error("Item price can't be blank!");
   }
   if (quantity === 0) {
     throw new Error("Item quantity can't be zero!");
-  }
-  if (!itemStatus) {
-    throw new Error("Provide item status");
   }
   return Object.freeze({
     id: () => id,

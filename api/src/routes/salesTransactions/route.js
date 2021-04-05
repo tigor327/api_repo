@@ -1,7 +1,6 @@
 const {
   getAllSalesTransactionsController,
   registerSalesTransactionController,
-  updateSalesTransactionController,
   removeSalesTransactionController,
 } = require("../../controllers/salesTransaction/index");
 
@@ -16,10 +15,6 @@ const salesTransactionRoutes = ({
   salesTransactionRouter.post(
     "/",
     makeExpressCallback(registerSalesTransactionController)
-  );
-  salesTransactionRouter.patch(
-    "/:id",
-    makeExpressCallback(updateSalesTransactionController)
   );
   salesTransactionRouter.delete(
     "/:id",

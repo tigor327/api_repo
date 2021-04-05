@@ -1,18 +1,18 @@
-const salesTransactionsQuery = ({ connects, model }) => {
+const deliveryTransactionsQuery = ({ connects, model }) => {
   return Object.freeze({
-    addSalesTransaction,
-    removeSalesTransaction,
-    getAllSalesTransactions,
-    updateSalesTransaction,
+    addDeliveryTransaction,
+    removeDeliveryTransaction,
+    getAllDeliveryTransactions,
+    updateDeliveryTransaction,
     checkDupe,
   });
 
-  async function getAllSalesTransactions({}) {
+  async function getAllDeliveryTransactions({}) {
     try {
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        let sql = `SELECT * FROM "salesTransactions" a JOIN "itemSales" b ON(a."salesTransactionId"=b."salesTransactionId")`;
+        let sql = `SELECT * FROM "deliveryTransactions" a JOIN "itemDeliveries" b ON(a."deliveryTransactionId"=b."deliveryTransactionsId")`;
         pool.query(sql, (err, res) => {
           pool.end();
 
@@ -20,22 +20,21 @@ const salesTransactionsQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-      //console.log("THE RESULTS OF THE QUERY: ", result);
       return result;
     } catch (e) {
       console.log("Error: ", e);
     }
   }
 
-  async function addSalesTransaction({ data }) {
+  async function addDeliveryTransaction({ data }) {
     var finalResult = [];
     try {
       const pool = await connects();
       //console.log("DATA ACCESS ITEMS QUERY: ", data);
-      //add to salesTransaction Table
+      //add to deliveryTransaction Table
       const result = await new Promise((resolve) => {
-        const sql = `INSERT INTO "salesTransactions" (custid, date, total) VALUES ($1, $2, $3) RETURNING "salesTransactionId"`;
-        let params = [data.custid, data.dateAndTime, data.totalPrice];
+        const sql = `INSERT INTO "deliveryTransactions" (supid, date, "grandTotal") VALUES ($1, $2, $3) RETURNING "deliveryTransactionId"`;
+        let params = [data.supid, data.dateAndTime, data.totalPrice];
         pool.query(sql, params, (err, res) => {
           pool.end();
           if (err) resolve(err);
@@ -43,19 +42,19 @@ const salesTransactionsQuery = ({ connects, model }) => {
         });
       });
       finalResult.push(result.rows);
-      //console.log(result);
 
-      //add itemSales data
+      //add itemDelivery data
       try {
         const pool = await connects();
         //console.log("DATA ACCESS ITEMS QUERY: ", data);
         for (var i = 0; i < data.items.items.length; i++) {
           const result1 = await new Promise((resolve) => {
-            const sql = `INSERT INTO "itemSales" (id, quantity, "salesTransactionId", "subTotal") VALUES ($1, $2, $3, $4) RETURNING id, quantity, "subTotal"`;
+            console.log("DATA PASSED BEFORE INSERT: ", data.items.items[0]);
+            const sql = `INSERT INTO "itemDeliveries" (id, quantity, "deliveryTransactionsId", "subTotal") VALUES ($1, $2, $3, $4) RETURNING id, quantity, "subTotal"`;
             let params = [
               data.items.items[i].id,
               data.items.items[i].quantity,
-              result.rows[0].salesTransactionId,
+              result.rows[0].deliveryTransactionId,
               data.items.items[i].subTotal,
             ];
             pool.query(sql, params, (err, res) => {
@@ -64,6 +63,11 @@ const salesTransactionsQuery = ({ connects, model }) => {
               resolve(res);
             });
           });
+          console.log(
+            "DATAAAA FROM QUERY DELIVERYTRANSACTION DATAACCESS: ",
+            result1
+          );
+
           finalResult.push(result1.command, result1.rows);
 
           //const result2 = updateItemQuantity({ data, i });
@@ -77,10 +81,10 @@ const salesTransactionsQuery = ({ connects, model }) => {
             //Update item Quantity
             const pool = await connects();
             const result2 = await new Promise((resolve) => {
-              const sql = `UPDATE "items" SET quantity = quantity - $1 WHERE id = $2 RETURNING name, price, quantity`;
+              const sql = `UPDATE "items" SET quantity = quantity + $1 WHERE id = $2 RETURNING name, price, quantity`;
               // console.log(
               //   "DATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: ",
-              //   data.items.items[0].quantity + "loop number: ",
+              //   data.items.items[i].quantity + "loop number: ",
               //   i
               // );
               let params = [
@@ -112,13 +116,13 @@ const salesTransactionsQuery = ({ connects, model }) => {
     }
   }
 
-  async function updateSalesTransaction({ data }) {
+  async function updateDeliveryTransaction({ data }) {
     try {
       console.log("info.name from inside query: ", data);
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        let sql = `SELECT * FROM salesTransactions WHERE id = $1`;
+        let sql = `SELECT * FROM deliveryTransactions WHERE id = $1`;
         let params = [data.id];
 
         pool.query(sql, params, (err, res) => {
@@ -131,15 +135,15 @@ const salesTransactionsQuery = ({ connects, model }) => {
 
       if (result) {
         try {
-          const SalesTransaction = model.SalesTransactionModel;
-          const res = await SalesTransaction.update(
+          const DeliveryTransaction = model.DeliveryTransactionModel;
+          const res = await DeliveryTransaction.update(
             {
               name: data.name,
               description: data.description,
               supid: data.supid,
               price: data.price,
               quantity: data.quantity,
-              salesTransactionStatus: "Active",
+              deliveryTransactionStatus: "Active",
               barcode: data.barcode,
             },
             {
@@ -157,13 +161,13 @@ const salesTransactionsQuery = ({ connects, model }) => {
     }
   }
 
-  async function removeSalesTransaction({ id }) {
+  async function removeDeliveryTransaction({ id }) {
     try {
       // use sequelize on inserting
-      const SalesTransaction = model.SalesTransactionModel;
-      const res = await SalesTransaction.destroy({
+      const DeliveryTransaction = model.DeliveryTransactionModel;
+      const res = await DeliveryTransaction.destroy({
         where: {
-          salesTransactionId: id,
+          deliveryTransactionId: id,
         },
       });
       return res;
@@ -177,7 +181,7 @@ const salesTransactionsQuery = ({ connects, model }) => {
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        const sql = `SELECT * FROM salesTransactions WHERE "name" = $1`;
+        const sql = `SELECT * FROM deliveryTransactions WHERE "name" = $1`;
         let params = [data.name];
 
         pool.query(sql, params, (err, res) => {
@@ -216,4 +220,4 @@ const salesTransactionsQuery = ({ connects, model }) => {
   //async function checkDupe({ data }) {}
 };
 
-module.exports = { salesTransactionsQuery };
+module.exports = { deliveryTransactionsQuery };

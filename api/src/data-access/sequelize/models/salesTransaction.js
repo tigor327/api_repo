@@ -2,25 +2,17 @@ const db = require("../../config/sequelize");
 const { DataTypes } = require("sequelize");
 
 //model based on the default database table
-const ItemModel = db.define(
-  "result"[
-    ("customer",
-    {
-      custId: { type: DataTypes.INTEGER },
-    },
-    "items",
-    {
-      items: { type: DataTypes.ARRAY },
-    })
-  ],
-
-  "transactionTotal",
+const SalesTransactionModel = db.define(
+  "salesTransaction",
   {
-    totalPrice: { type: DataTypes.INTEGER },
+    salesTransactionId: { type: DataTypes.INTEGER, primaryKey: true },
+    custid: { type: DataTypes.INTEGER },
+    date: { type: DataTypes.DATE },
+    total: { type: DataTypes.INTEGER },
   },
-  { freezeTableName: true, timestamps: false, tableName: "items" }
+  { freezeTableName: true, timestamps: false, tableName: "salesTransactions" }
 );
 
 module.exports = {
-  ItemModel,
+  SalesTransactionModel,
 };

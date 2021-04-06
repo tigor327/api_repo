@@ -10,13 +10,16 @@ const makeSalesTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
 
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-  const custid = info[0].customer[0].custid;
+  var custid = info[0].customer[0].custid;
   const items = info[1];
   const totalPrice = info[2].transactionTotal[0].totalPrice;
   //const { custid, totalPrice, items } = info;
-
+  console.log(
+    "ENTITIES VALIDATION OF SALESTRANSACTION: ",
+    info[0].customer[0].custid
+  );
   if (!custid) {
-    throw new Error("Please enter full name");
+    custid = 100;
   }
   if (!totalPrice) {
     throw new Error("Please enter contact information");

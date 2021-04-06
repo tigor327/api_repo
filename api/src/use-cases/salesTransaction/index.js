@@ -6,11 +6,15 @@ const {
 const salesTransactionsDb = require("../../data-access/salesTransactions/index");
 
 const listSalesTransactions = require("./list-salesTransaction");
+const listSalesByIdTransactions = require("./list-salesByIdTransaction");
 const registerSalesTransaction = require("./register-salesTransaction");
 const removeSalesTransaction = require("./remove-salesTransaction");
 const updateSalesTransaction = require("./update-salesTransaction");
 
 const listSalesTransactionUseCase = listSalesTransactions({
+  salesTransactionsDb,
+});
+const listSalesByIdTransactionUseCase = listSalesByIdTransactions({
   salesTransactionsDb,
 });
 const registerSalesTransactionUseCase = registerSalesTransaction({
@@ -27,6 +31,7 @@ const updateSalesTransactionUseCase = updateSalesTransaction({
 
 const services = Object.freeze({
   listSalesTransactionUseCase,
+  listSalesByIdTransactionUseCase,
   registerSalesTransactionUseCase,
   removeSalesTransactionUseCase,
   updateSalesTransactionUseCase,
@@ -35,6 +40,7 @@ const services = Object.freeze({
 module.exports = services;
 module.exports = {
   listSalesTransactionUseCase,
+  listSalesByIdTransactionUseCase,
   registerSalesTransactionUseCase,
   removeSalesTransactionUseCase,
   updateSalesTransactionUseCase,

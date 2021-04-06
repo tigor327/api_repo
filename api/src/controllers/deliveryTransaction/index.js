@@ -3,9 +3,11 @@ const {
   registerDeliveryTransactionUseCase,
   removeDeliveryTransactionUseCase,
   updateDeliveryTransactionUseCase,
+  listDeliveryByIdTransactionUseCase,
 } = require("../../use-cases/deliveryTransaction/index");
 
 const getAllDeliveryTransactions = require("./get-all-deliveryTransactions");
+const getAllDeliveryByIdTransactions = require("./get-all-deliveryByIdTransactions");
 const registerDeliveryTransactions = require("./register-deliveryTransaction");
 const removeDeliveryTransactionById = require("./remove-deliveryTransaction");
 const updateDeliveryTransactionById = require("./update-deliveryTransaction");
@@ -13,6 +15,11 @@ const updateDeliveryTransactionById = require("./update-deliveryTransaction");
 const getAllDeliveryTransactionsController = getAllDeliveryTransactions({
   listDeliveryTransactionUseCase,
 });
+const getAllDeliveryByIdTransactionsController = getAllDeliveryByIdTransactions(
+  {
+    listDeliveryByIdTransactionUseCase,
+  }
+);
 const registerDeliveryTransactionController = registerDeliveryTransactions({
   registerDeliveryTransactionUseCase,
 });
@@ -28,6 +35,7 @@ const services = Object.freeze({
   registerDeliveryTransactionController,
   removeDeliveryTransactionController,
   updateDeliveryTransactionController,
+  getAllDeliveryByIdTransactionsController,
 });
 
 module.exports = services;
@@ -36,4 +44,5 @@ module.exports = {
   registerDeliveryTransactionController,
   removeDeliveryTransactionController,
   updateDeliveryTransactionController,
+  getAllDeliveryByIdTransactionsController,
 };

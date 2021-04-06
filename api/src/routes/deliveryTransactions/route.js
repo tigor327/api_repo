@@ -2,6 +2,8 @@ const {
   getAllDeliveryTransactionsController,
   registerDeliveryTransactionController,
   removeDeliveryTransactionController,
+  updateDeliveryTransactionController,
+  getAllDeliveryByIdTransactionsController,
 } = require("../../controllers/deliveryTransaction/index");
 
 const deliveryTransactionRoutes = ({
@@ -12,6 +14,10 @@ const deliveryTransactionRoutes = ({
     "/",
     makeExpressCallback(getAllDeliveryTransactionsController)
   );
+  deliveryTransactionRouter.get(
+    "/:id",
+    makeExpressCallback(getAllDeliveryByIdTransactionsController)
+  );
   deliveryTransactionRouter.post(
     "/",
     makeExpressCallback(registerDeliveryTransactionController)
@@ -20,6 +26,10 @@ const deliveryTransactionRoutes = ({
     "/:id",
     makeExpressCallback(removeDeliveryTransactionController)
   );
+  // deliveryTransactionRouter.patch(
+  //   "/:id",
+  //   makeExpressCallback(updateDeliveryTransactionController)
+  // );
 
   return deliveryTransactionRouter;
 };

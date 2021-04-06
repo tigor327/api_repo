@@ -1,9 +1,11 @@
-const removeSalesTransactionById = ({ removeSalesTransactionUseCase }) => {
+const getAllSalesByIdTransactions = ({ listSalesByIdTransactionUseCase }) => {
   return async function get(httpRequest) {
+    //console.log("remove-items controllers", httpRequest);
     const headers = {
       "Content-Type": "application/json",
     };
     try {
+      //get the httprequest body
       const { source = {}, ...info } = httpRequest.body;
       source.ip = httpRequest.ip;
       source.browser = httpRequest.headers["User-Agent"];
@@ -15,16 +17,13 @@ const removeSalesTransactionById = ({ removeSalesTransactionUseCase }) => {
         source,
         id: httpRequest.params.id, // when id is passed
       };
-
-      const removeSalesTransactions = await removeSalesTransactionUseCase(
-        toView
-      );
+      const transactionsList = await listSalesByIdTransactionUseCase(toView);
       return {
         headers: {
           "Content-Type": "application/json",
         },
         statusCode: 200,
-        body: { removeSalesTransactions },
+        body: { transactionsList },
       };
     } catch (e) {
       // TODO: Error logging
@@ -40,4 +39,4 @@ const removeSalesTransactionById = ({ removeSalesTransactionUseCase }) => {
   };
 };
 
-module.exports = removeSalesTransactionById;
+module.exports = getAllSalesByIdTransactions;

@@ -8,6 +8,8 @@ const listDeliveryTransactions = ({ deliveryTransactionsDb }) => {
       deliveryTransactions.map((deliveryTransaction) =>
         deliveryTransactionList.push(deliveryTransaction)
       );
+    } else {
+      return "No transactions yet.";
     }
 
     return deliveryTransactionList;

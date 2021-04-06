@@ -27,7 +27,7 @@ const makeDeliveryTransaction = ({ info }) => {
   }
 
   return Object.freeze({
-    supid: () => custid,
+    supid: () => supid,
     totalPrice: () => totalPrice,
     items: () => items,
     dateAndTime: () => dateAndTime,

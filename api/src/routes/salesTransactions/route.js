@@ -1,7 +1,9 @@
 const {
   getAllSalesTransactionsController,
+  getAllSalesByIdTransactionsController,
   registerSalesTransactionController,
   removeSalesTransactionController,
+  updateSalesTransactionController,
 } = require("../../controllers/salesTransaction/index");
 
 const salesTransactionRoutes = ({
@@ -12,6 +14,10 @@ const salesTransactionRoutes = ({
     "/",
     makeExpressCallback(getAllSalesTransactionsController)
   );
+  salesTransactionRouter.get(
+    "/:id",
+    makeExpressCallback(getAllSalesByIdTransactionsController)
+  );
   salesTransactionRouter.post(
     "/",
     makeExpressCallback(registerSalesTransactionController)
@@ -20,6 +26,10 @@ const salesTransactionRoutes = ({
     "/:id",
     makeExpressCallback(removeSalesTransactionController)
   );
+  // salesTransactionRouter.patch(
+  //   "/:id",
+  //   makeExpressCallback(updateSalesTransactionController)
+  // );
 
   return salesTransactionRouter;
 };

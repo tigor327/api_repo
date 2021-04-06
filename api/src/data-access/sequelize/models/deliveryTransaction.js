@@ -6,7 +6,7 @@ const DeliveryTransactionModel = db.define(
   "deliveryTransaction",
   {
     deliveryTransactionsId: { type: DataTypes.INTEGER, primaryKey: true },
-    suptid: { type: DataTypes.INTEGER },
+    supid: { type: DataTypes.INTEGER },
     date: { type: DataTypes.DATE },
     grandTotal: { type: DataTypes.INTEGER },
   },

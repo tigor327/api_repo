@@ -22,6 +22,1631 @@ app.use("/items/list", itemRoute);
 app.use("/transaction/sales", salesTransactionRoute);
 app.use("/transaction/delivery", deliveryTransactionRoute);
 
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
+// app.use("/customers/list", customerRoute);
+// app.use("/suppliers/list", supplierRoute);
+// app.use("/items/list", itemRoute);
+// app.use("/transaction/sales", salesTransactionRoute);
+// app.use("/transaction/delivery", deliveryTransactionRoute);
+
 app.use(async (req, res) => {
   res.status(404).send("Route unavailable.");
 });

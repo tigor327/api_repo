@@ -1,27 +1,30 @@
+const { supplierQuery } = require("../../data-access/suppliers/query");
+
 const updateDeliveryTransactions = ({
   deliveryTransactionsDb,
-  updateDeliveryTransactions_ENTITY,
+  updateDeliveryTransaction_ENTITY,
 }) => {
   return async function add(info) {
-    let data = await updateDeliveryTransactions_ENTITY({ info });
+    let today = new Date();
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+    let day = today.getDate();
+
+    let hour = today.getHours();
+    let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
+
+    let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
+    let data = await updateDeliveryTransaction_ENTITY({ info });
 
     data = {
-      name: info.name,
-      barcode: info.barcode,
-      description: info.description,
-      supplier: info.supplier,
-      price: info.price,
-      quantity: info.quantity,
-      deliveryTransactionStatus: info.deliveryTransactionStatus,
+      supid: info[0].supplier[0].supid,
+      items: info[1],
+      transactionTotal: info[2].transactionTotal[0].totalPrice,
+      dateAndTime: dateAndTime,
       id: info.id,
     };
-    const dupeCheck = await deliveryTransactionsDb.checkDupe({ data });
 
-    if (dupeCheck.rowCount > 0) {
-      throw new Error("Name already exists");
-    }
-
-    const res = await deliveryTransactionsDb.updateDeliveryTransactions({
+    const res = await deliveryTransactionsDb.updateDeliveryTransaction({
       data,
     });
     let prompt = "";

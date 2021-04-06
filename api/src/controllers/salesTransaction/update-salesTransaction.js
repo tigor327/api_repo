@@ -1,4 +1,4 @@
-const updateSalesTransactionById = ({ updateSalesTransactionUseCase }) => {
+const updateSalesTransaction = ({ updateSalesTransactionUseCase }) => {
   return async function get(httpRequest) {
     const headers = {
       "Content-Type": "application/json",
@@ -38,4 +38,4 @@ const updateSalesTransactionById = ({ updateSalesTransactionUseCase }) => {
   };
 };
 
-module.exports = updateSalesTransactionById;
+module.exports = updateSalesTransaction;

@@ -1,18 +1,24 @@
-const updateSalesTransactions = ({
+const updateSalesTransaction = ({
   salesTransactionsDb,
-  updateSalesTransactions_ENTITY,
+  updateSalesTransaction_ENTITY,
 }) => {
   return async function add(info) {
-    let data = await updateSalesTransactions_ENTITY({ info });
+    let today = new Date();
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+    let day = today.getDate();
 
+    let hour = today.getHours();
+    let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
+
+    let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
+
+    let data = await updateSalesTransaction_ENTITY({ info });
     data = {
-      name: info.name,
-      barcode: info.barcode,
-      description: info.description,
-      supplier: info.supplier,
-      price: info.price,
-      quantity: info.quantity,
-      salesTransactionStatus: info.salesTransactionStatus,
+      custid: info[0].customer[0].custid,
+      items: info[1],
+      transactionTotal: info[2].transactionTotal[0].totalPrice,
+      dateAndTime: dateAndTime,
       id: info.id,
     };
     const dupeCheck = await salesTransactionsDb.checkDupe({ data });
@@ -21,7 +27,7 @@ const updateSalesTransactions = ({
       throw new Error("Name already exists");
     }
 
-    const res = await salesTransactionsDb.updateSalesTransactions({ data });
+    const res = await salesTransactionsDb.updateSalesTransaction({ data });
     let prompt = "";
     console.log("res count result: ", res.res);
     if (res.res == 1) {
@@ -37,4 +43,4 @@ const updateSalesTransactions = ({
   };
 };
 
-module.exports = updateSalesTransactions;
+module.exports = updateSalesTransaction;

@@ -15,7 +15,7 @@ const updateDeliveryTransactionById = ({
       const toView = {
         ...info,
         source,
-        id: httpRequest.params.id, // when id is passed
+        id: httpRequest.params.id, // when id is passed through
       };
 
       const result = await updateDeliveryTransactionUseCase(toView);

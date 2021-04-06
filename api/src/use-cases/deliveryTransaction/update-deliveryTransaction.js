@@ -1,5 +1,3 @@
-const { supplierQuery } = require("../../data-access/suppliers/query");
-
 const updateDeliveryTransactions = ({
   deliveryTransactionsDb,
   updateDeliveryTransaction_ENTITY,
@@ -17,9 +15,9 @@ const updateDeliveryTransactions = ({
     let data = await updateDeliveryTransaction_ENTITY({ info });
 
     data = {
-      supid: info[0].supplier[0].supid,
+      supid: info[0].deliveryDetails[0].supid,
       items: info[1],
-      transactionTotal: info[2].transactionTotal[0].totalPrice,
+      deliveryDetails: info[0].deliveryDetails[0].totalPrice,
       dateAndTime: dateAndTime,
       id: info.id,
     };

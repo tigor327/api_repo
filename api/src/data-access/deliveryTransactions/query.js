@@ -55,14 +55,24 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       //console.log("DATA ACCESS ITEMS QUERY: ", data);
       //add to deliveryTransaction Table
       const result = await new Promise((resolve) => {
-        const sql = `INSERT INTO "deliveryTransactions" (supid, date, "grandTotal") VALUES ($1, $2, $3) RETURNING "deliveryTransactionId"`;
-        let params = [data.supid, data.dateAndTime, data.totalPrice];
+        console.log("BEFORE QUERY INSERT ADDING TRANSACTION DELIVERY: ", data);
+        const sql = `INSERT INTO "deliveryTransactions" (supid, "deliveryDate", date, "grandTotal") VALUES ($1, $2, $3, $4) RETURNING "deliveryTransactionId"`;
+        let params = [
+          data.supid,
+          data.deliveryDate,
+          data.dateAndTime,
+          data.totalPrice,
+        ];
         pool.query(sql, params, (err, res) => {
           pool.end();
           if (err) resolve(err);
           resolve(res);
         });
       });
+      console.log(
+        "ASDSDFASDFFASDFSADFASDFSADFSADGDASFBZXCVBSDFZBVDFZGDASFGVXZCVSDFGASDVZXCFGDRVZXFVDFASGDFV: ",
+        result
+      );
       finalResult.push(result.rows);
 
       //add items delivered to itemDeliveries table

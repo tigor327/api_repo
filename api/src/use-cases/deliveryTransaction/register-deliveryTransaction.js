@@ -13,15 +13,21 @@ const registerDeliveryTransaction = ({
 
     let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
     let data = await makeDeliveryTransaction_ENTITY({ info });
-    const supid = info[0].supplier[0].supid;
+    console.log(
+      "CONSOLE LOG REGISTER DELIVERYTRANSACTION",
+      info[0].deliveryDetails[0].supid
+    );
+    const deliveryDate = info[0].deliveryDetails[1].deliveryDate;
+    const supid = info[0].deliveryDetails[0].supid;
     const items = info[1];
-    const totalPrice = info[2].transactionTotal[0].totalPrice;
+    const totalPrice = info[0].deliveryDetails[2].grandTotal;
     //console.log("LOG FROM USECASES-SALESTRANSACTION-REGISTER: ", items);
     data = {
       supid: supid,
       totalPrice: totalPrice,
       items: items,
       dateAndTime: dateAndTime,
+      deliveryDate: deliveryDate,
     };
     const dupeCheck = await deliveryTransactionsDb.checkDupe({ data });
     if (dupeCheck.rowCount > 0) {

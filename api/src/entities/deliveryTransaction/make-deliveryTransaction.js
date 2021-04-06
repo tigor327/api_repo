@@ -10,10 +10,11 @@ const makeDeliveryTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
 
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-
-  const supid = info[0].supplier[0].supid;
+  console.log(info[0].deliveryDetails[0].supid);
+  const supid = info[0].deliveryDetails[0].supid;
+  const deliveryDate = info[0].deliveryDetails[1].deliveryDate;
   const items = info[1];
-  const totalPrice = info[2].transactionTotal[0].totalPrice;
+  const totalPrice = info[0].deliveryDetails[2].grandTotal;
   //const { custid, totalPrice, items } = info;
 
   if (!supid) {
@@ -31,6 +32,7 @@ const makeDeliveryTransaction = ({ info }) => {
     totalPrice: () => totalPrice,
     items: () => items,
     dateAndTime: () => dateAndTime,
+    deliveryDate: () => deliveryDate,
   });
   // }
 };

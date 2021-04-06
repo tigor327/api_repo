@@ -14,22 +14,22 @@ const salesTransactionRoutes = ({
     "/",
     makeExpressCallback(getAllSalesTransactionsController)
   );
-  // salesTransactionRouter.get(
-  //   "/:id",
-  //   makeExpressCallback(getAllSalesByIdTransactionsController)
-  // );
-  // salesTransactionRouter.post(
-  //   "/",
-  //   makeExpressCallback(registerSalesTransactionController)
-  // );
-  // salesTransactionRouter.delete(
-  //   "/:id",
-  //   makeExpressCallback(removeSalesTransactionController)
-  // );
-  // salesTransactionRouter.patch(
-  //   "/:id",
-  //   makeExpressCallback(updateSalesTransactionController)
-  // );
+  salesTransactionRouter.get(
+    "/:id",
+    makeExpressCallback(getAllSalesByIdTransactionsController)
+  );
+  salesTransactionRouter.post(
+    "/",
+    makeExpressCallback(registerSalesTransactionController)
+  );
+  salesTransactionRouter.delete(
+    "/:id",
+    makeExpressCallback(removeSalesTransactionController)
+  );
+  salesTransactionRouter.patch(
+    "/:id",
+    makeExpressCallback(updateSalesTransactionController)
+  );
 
   return salesTransactionRouter;
 };

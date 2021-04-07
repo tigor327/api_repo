@@ -9,11 +9,22 @@ const updateSalesTransaction = ({ info }) => {
 
   let hour = today.getHours();
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
-  console.log("CONSOLE LOG FROM UPDATESALESTRANSACTION IN ENTITIES: ", info);
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-  const custid = info[0].customer[0].custid;
+
+  if (!info[0].salesDetails) {
+    throw new Error(
+      "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
+    );
+  }
+  if (!info[1].items) {
+    throw new Error(
+      "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
+    );
+  }
+
+  const custid = info[0].salesDetails[0].custid;
   const items = info[1];
-  const totalPrice = info[2].transactionTotal[0].totalPrice;
+  const totalPrice = info[0].salesDetails[1].grandTotal;
 
   if (!custid) {
     custid = 100;

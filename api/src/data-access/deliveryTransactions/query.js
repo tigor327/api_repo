@@ -13,7 +13,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        let sql = `SELECT * FROM "deliveryTransactions" a JOIN "itemDeliveries" b ON(a."deliveryTransactionId"=b."deliveryTransactionsId")`;
+        let sql = `SELECT * FROM "deliveryTransactions"`;
         pool.query(sql, (err, res) => {
           pool.end();
 
@@ -30,9 +30,8 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
   async function getAllDeliveryByIdTransactions({ id }) {
     try {
       const pool = await connects();
-      console.log("DATA PASSED: ", id);
       const result = await new Promise((resolve) => {
-        let sql = `SELECT * FROM "deliveryTransactions" a JOIN "itemDeliveries" b ON(a."deliveryTransactionId"=b."deliveryTransactionsId") WHERE b."deliveryTransactionsId" = $1`;
+        let sql = `SELECT a.*, b."name", b.barcode, b.description, b.price, c."supName" FROM "itemSales" a INNER JOIN "items" b ON a."id" = b."id" INNER JOIN "suppliers" c ON b.supid = c.supid WHERE a."salesTransactionId" = $1`;
         let params = [id];
         pool.query(sql, params, (err, res) => {
           pool.end();
@@ -41,7 +40,6 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-      console.log("QUERY RESULT GETDELIVERYBYID: ", result);
       return result;
     } catch (e) {
       console.log("Error: ", e);
@@ -55,7 +53,6 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       //console.log("DATA ACCESS ITEMS QUERY: ", data);
       //add to deliveryTransaction Table
       const result = await new Promise((resolve) => {
-        console.log("BEFORE QUERY INSERT ADDING TRANSACTION DELIVERY: ", data);
         const sql = `INSERT INTO "deliveryTransactions" (supid, "deliveryDate", date, "grandTotal") VALUES ($1, $2, $3, $4) RETURNING "deliveryTransactionId"`;
         let params = [
           data.supid,
@@ -78,7 +75,6 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
         //console.log("DATA ACCESS ITEMS QUERY: ", data);
         for (var i = 0; i < data.items.items.length; i++) {
           const result1 = await new Promise((resolve) => {
-            console.log("DATA PASSED BEFORE INSERT: ", data.items.items[0]);
             const sql = `INSERT INTO "itemDeliveries" (id, quantity, "deliveryTransactionsId", "subTotal") VALUES ($1, $2, $3, $4) RETURNING id, quantity, "subTotal"`;
             let params = [
               data.items.items[i].id,
@@ -92,10 +88,6 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
               resolve(res);
             });
           });
-          console.log(
-            "DATAAAA FROM QUERY DELIVERYTRANSACTION DATAACCESS: ",
-            result1
-          );
 
           finalResult.push(result1.command, result1.rows);
 

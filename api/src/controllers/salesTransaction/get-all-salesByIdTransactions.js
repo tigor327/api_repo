@@ -17,13 +17,13 @@ const getAllSalesByIdTransactions = ({ listSalesByIdTransactionUseCase }) => {
         source,
         id: httpRequest.params.id, // when id is passed
       };
-      const transactionsList = await listSalesByIdTransactionUseCase(toView);
+      const salesList = await listSalesByIdTransactionUseCase(toView);
       return {
         headers: {
           "Content-Type": "application/json",
         },
         statusCode: 200,
-        body: { transactionsList },
+        body: { salesList },
       };
     } catch (e) {
       // TODO: Error logging

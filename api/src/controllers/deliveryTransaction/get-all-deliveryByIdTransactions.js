@@ -19,13 +19,13 @@ const getAllDeliveryByIdTransactions = ({
         source,
         id: httpRequest.params.id, // when id is passed
       };
-      const transactionsList = await listDeliveryByIdTransactionUseCase(toView);
+      const deliveryList = await listDeliveryByIdTransactionUseCase(toView);
       return {
         headers: {
           "Content-Type": "application/json",
         },
         statusCode: 200,
-        body: { transactionsList },
+        body: { deliveryList },
       };
     } catch (e) {
       // TODO: Error logging

@@ -14,13 +14,13 @@ const getAllSalesTransactions = ({ listSalesTransactionUseCase }) => {
         ...info,
         source,
       };
-      const transactionsList = await listSalesTransactionUseCase(toView);
+      const salesList = await listSalesTransactionUseCase(toView);
       return {
         headers: {
           "Content-Type": "application/json",
         },
         statusCode: 200,
-        body: { transactionsList },
+        body: { salesList },
       };
     } catch (e) {
       // TODO: Error logging

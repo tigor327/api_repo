@@ -8,7 +8,7 @@ const SalesTransactionModel = db.define(
     salesTransactionId: { type: DataTypes.INTEGER, primaryKey: true },
     custid: { type: DataTypes.INTEGER },
     date: { type: DataTypes.DATE },
-    total: { type: DataTypes.INTEGER },
+    grandTotal: { type: DataTypes.INTEGER },
   },
   { freezeTableName: true, timestamps: false, tableName: "salesTransactions" }
 );

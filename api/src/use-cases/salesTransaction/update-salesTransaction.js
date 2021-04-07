@@ -15,22 +15,17 @@ const updateSalesTransaction = ({
 
     let data = await updateSalesTransaction_ENTITY({ info });
     data = {
-      custid: info[0].customer[0].custid,
+      custid: info[0].salesDetails[0].custid,
       items: info[1],
-      transactionTotal: info[2].transactionTotal[0].totalPrice,
+      transactionTotal: info[0].salesDetails[1].grandTotal,
       dateAndTime: dateAndTime,
       id: info.id,
     };
-    const dupeCheck = await salesTransactionsDb.checkDupe({ data });
-
-    if (dupeCheck.rowCount > 0) {
-      throw new Error("Name already exists");
-    }
 
     const res = await salesTransactionsDb.updateSalesTransaction({ data });
     let prompt = "";
-    console.log("res count result: ", res.res);
-    if (res.res == 1) {
+    console.log("res count result: ", res.finalResult.length);
+    if (res.finalResult.length >= 2) {
       prompt = "SalesTransactions updated succesfully!";
     } else {
       prompt = "Failed to update salesTransaction.";

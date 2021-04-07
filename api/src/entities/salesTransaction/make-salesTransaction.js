@@ -10,19 +10,29 @@ const makeSalesTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
 
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-  var custid = info[0].customer[0].custid;
+  if (!info[0].salesDetails) {
+    throw new Error(
+      "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
+    );
+  }
+  if (!info[1].items) {
+    throw new Error(
+      "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
+    );
+  }
+  var custid = info[0].salesDetails[0].custid;
   const items = info[1];
-  const totalPrice = info[2].transactionTotal[0].totalPrice;
-  //const { custid, totalPrice, items } = info;
+  const transactionTotal = info[0].salesDetails[1].grandTotal;
+  //const { custid, transactionTotal, items } = info;
   console.log(
     "ENTITIES VALIDATION OF SALESTRANSACTION: ",
-    info[0].customer[0].custid
+    info[0].salesDetails[0].custid
   );
   if (!custid) {
-    custid = 100;
+    custid = 1;
   }
-  if (!totalPrice) {
-    throw new Error("Please enter contact information");
+  if (!transactionTotal) {
+    throw new Error("Please enter grand total.");
   }
   if (!items) {
     throw new Error("Please enter address");
@@ -30,7 +40,7 @@ const makeSalesTransaction = ({ info }) => {
 
   return Object.freeze({
     custid: () => custid,
-    totalPrice: () => totalPrice,
+    transactionTotal: () => transactionTotal,
     items: () => items,
     dateAndTime: () => dateAndTime,
   });

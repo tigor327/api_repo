@@ -5,7 +5,7 @@ const makeSupplier = ({ info }) => {
   console.log("INFO SENT FROM ENTITIES SUPPLIER MAKE SUPPLIER: ", info);
   const { supName, supContact, supAddress } = info;
   const fname = isValidName(supName);
-  const supStatus = "Inactive";
+  const supStatus = "Active";
 
   if (!supName) {
     throw new Error("Please enter full name");

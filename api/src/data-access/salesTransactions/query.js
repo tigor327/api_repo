@@ -13,7 +13,7 @@ const salesTransactionsQuery = ({ connects, model }) => {
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        let sql = `SELECT * FROM "salesTransactions"`;
+        let sql = `SELECT * FROM "salesTransactions" a INNER JOIN customers b ON a.custid = b.custid`;
         pool.query(sql, (err, res) => {
           pool.end();
 

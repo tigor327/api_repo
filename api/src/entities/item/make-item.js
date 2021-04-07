@@ -10,7 +10,6 @@ const makeItem = ({ info }) => {
     quantity,
     itemStatus,
   } = info;
-  console.log("MAKE ITEM INSIDE ENTITIES: ", info);
   if (!name) {
     throw new Error("Item name can't be blank!");
   }

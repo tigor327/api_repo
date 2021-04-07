@@ -56,14 +56,23 @@ const salesTransactionsQuery = ({ connects, model }) => {
       //console.log("DATA ACCESS ITEMS QUERY: ", data);
       //add to salesTransaction Table
       const result = await new Promise((resolve) => {
-        const sql = `INSERT INTO "salesTransactions" (custid, date, total) VALUES ($1, $2, $3) RETURNING "salesTransactionId"`;
-        let params = [data.custid, data.dateAndTime, data.totalPrice];
+        const sql = `INSERT INTO "salesTransactions" (custid, "deliveryDate", date, total) VALUES ($1, $2, $3, $4) RETURNING "salesTransactionId"`;
+        let params = [
+          data.custid,
+          data.deliveryDate,
+          data.dateAndTime,
+          data.totalPrice,
+        ];
         pool.query(sql, params, (err, res) => {
           pool.end();
           if (err) resolve(err);
           resolve(res);
         });
       });
+      console.log(
+        "ASDSDFASDFFASDFSADFASDFSADFSADGDASFBZXCVBSDFZBVDFZGDASFGVXZCVSDFGASDVZXCFGDRVZXFVDFASGDFV: ",
+        result
+      );
       finalResult.push(result.rows);
       //console.log(result);
 

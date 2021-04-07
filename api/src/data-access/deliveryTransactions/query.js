@@ -69,10 +69,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-      console.log(
-        "ASDSDFASDFFASDFSADFASDFSADFSADGDASFBZXCVBSDFZBVDFZGDASFGVXZCVSDFGASDVZXCFGDRVZXFVDFASGDFV: ",
-        result
-      );
+
       finalResult.push(result.rows);
 
       //add items delivered to itemDeliveries table
@@ -172,16 +169,21 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
   async function updateDeliveryTransaction({ data }) {
     var finalResult = [];
     try {
-      console.log("info.name from inside query: ", data);
+      console.log("DISPLAY DATA BEING PASSED BEFORE EXECUTING QUERY: ", data);
       const pool = await connects();
       const result = await new Promise((resolve) => {
-        let sql = `UPDATE "deliveryTransactions" SET "supid" = $2, date = $3, "grandTotal" = $4  WHERE "deliveryTransactionId" = $1`;
+        let sql = `UPDATE "deliveryTransactions" SET "supid" = $2, "deliveryDate" = $3, date = $4, "grandTotal" = $5  WHERE "deliveryTransactionId" = $1`;
         let params = [
           data.id,
           data.supid,
+          data.deliveryDate,
           data.dateAndTime,
-          data.transactionTotal,
+          data.totalPrice,
         ];
+        console.log(
+          "ASDFASDFSADFSADFASDFASDFASDFASDFASDFSADFSADFASDFASDFASDFASDFASDFSADFSADFASDFASDFASDF: ",
+          params
+        );
 
         pool.query(sql, params, (err, res) => {
           pool.end();
@@ -194,10 +196,9 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       if (result) {
         try {
           const pool = await connects();
-          //console.log("DATA ACCESS ITEMS QUERY: ", data);
+          console.log("DATA ACCESS ITEMS QUERY: ", data.items.items[0]);
           for (var i = 0; i < data.items.items.length; i++) {
             const result1 = await new Promise((resolve) => {
-              console.log("DATA PASSED BEFORE INSERT: ", data.items.items[i]);
               const sql = `UPDATE "itemDeliveries" SET quantity = quantity - $2, "subTotal" = $4 WHERE id = $1 AND "deliveryTransactionsId" = $3 returning quantity`;
 
               let params = [
@@ -206,10 +207,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
                 data.id,
                 data.items.items[i].subTotal,
               ];
-              // console.log(
-              //   "DATAAAA FROM QUERY DELIVERYTRANSACTION DATAACCESS: ",
-              //   params
-              // );
+
               pool.query(sql, params, (err, res) => {
                 //pool.end();
                 if (err) resolve(err);
@@ -236,7 +234,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
                 //   data.items.items[i].quantity + "loop number: ",
                 //   i
                 // );
-
+                console.log("DATA PASSED BEFORE INSERT: ", result1.rows);
                 let params = [result1.rows[0].quantity, data.items.items[i].id];
                 pool.query(sql, params, (err, res) => {
                   //pool.end();

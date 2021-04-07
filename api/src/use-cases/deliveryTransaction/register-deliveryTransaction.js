@@ -13,10 +13,7 @@ const registerDeliveryTransaction = ({
 
     let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
     let data = await makeDeliveryTransaction_ENTITY({ info });
-    console.log(
-      "CONSOLE LOG REGISTER DELIVERYTRANSACTION",
-      info[0].deliveryDetails[0].supid
-    );
+
     const deliveryDate = info[0].deliveryDetails[1].deliveryDate;
     const supid = info[0].deliveryDetails[0].supid;
     const items = info[1];
@@ -29,10 +26,6 @@ const registerDeliveryTransaction = ({
       dateAndTime: dateAndTime,
       deliveryDate: deliveryDate,
     };
-    const dupeCheck = await deliveryTransactionsDb.checkDupe({ data });
-    if (dupeCheck.rowCount > 0) {
-      throw new Error("Name already exists");
-    }
 
     const res = await deliveryTransactionsDb.addDeliveryTransaction({ data });
 

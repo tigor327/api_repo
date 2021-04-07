@@ -14,12 +14,18 @@ const updateDeliveryTransactions = ({
     let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
     let data = await updateDeliveryTransaction_ENTITY({ info });
 
+    const deliveryDate = info[0].deliveryDetails[1].deliveryDate;
+    const supid = info[0].deliveryDetails[0].supid;
+    const items = info[1];
+    const totalPrice = info[0].deliveryDetails[2].grandTotal;
+    const id = info.id;
     data = {
-      supid: info[0].deliveryDetails[0].supid,
-      items: info[1],
-      deliveryDetails: info[0].deliveryDetails[0].totalPrice,
+      supid: supid,
+      totalPrice: totalPrice,
+      items: items,
       dateAndTime: dateAndTime,
-      id: info.id,
+      deliveryDate: deliveryDate,
+      id: id,
     };
 
     const res = await deliveryTransactionsDb.updateDeliveryTransaction({

@@ -28,7 +28,6 @@ const itemsQuery = ({ connects, model }) => {
   }
 
   async function addItem({ data }) {
-    console.log("DATA ACCESS ITEMS QUERY: ", data);
     try {
       const Item = model.ItemModel;
       const result = await Item.create({
@@ -48,7 +47,6 @@ const itemsQuery = ({ connects, model }) => {
 
   async function updateItem({ data }) {
     try {
-      //console.log("info.name from inside query: ", data);
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
@@ -133,7 +131,6 @@ const itemsQuery = ({ connects, model }) => {
       const result = await new Promise((resolve) => {
         const sql = `SELECT * FROM items WHERE "barcode" = $1`;
         let params = [data.barcode];
-        console.log("BARCODE TO SEARCH FOR", data.barcode);
 
         pool.query(sql, params, (err, res) => {
           pool.end();

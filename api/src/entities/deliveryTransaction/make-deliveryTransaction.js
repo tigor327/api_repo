@@ -21,7 +21,7 @@ const makeDeliveryTransaction = ({ info }) => {
     );
   }
   console.log(info[0].deliveryDetails[0].supid);
-  const supid = info[0].deliveryDetails[0].supid;
+  var supid = info[0].deliveryDetails[0].supid;
   const deliveryDate = info[0].deliveryDetails[1].deliveryDate;
   const items = info[1];
   const totalPrice = info[0].deliveryDetails[2].grandTotal;

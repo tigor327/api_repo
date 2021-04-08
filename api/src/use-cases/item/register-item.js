@@ -5,7 +5,7 @@ const registerItem = ({ itemsDb, makeItem_ENTITY }) => {
     data = {
       name: data.name,
       barcode: data.barcode,
-      supid: data.supid,
+      supName: data.supName,
       price: data.price,
       quantity: data.quantity,
       itemStatus: data.itemStatus,

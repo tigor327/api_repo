@@ -13,7 +13,7 @@ const itemsQuery = ({ connects, model }) => {
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        let sql = `SELECT * FROM items ORDER BY id`;
+        let sql = `SELECT * FROM items a JOIN suppliers b ON a.supid = b.supid ORDER BY id`;
         pool.query(sql, (err, res) => {
           pool.end();
 
@@ -29,15 +29,16 @@ const itemsQuery = ({ connects, model }) => {
 
   async function addItem({ data }) {
     try {
+      let supId = await getSupId({ data });
       const Item = model.ItemModel;
       const result = await Item.create({
         name: data.name,
         barcode: data.barcode,
         description: data.description,
-        supid: data.supid,
+        supid: supId.rows[0].supid,
         price: data.price,
         quantity: data.quantity,
-        itemStatus: "Active",
+        itemStatus: data.itemStatus,
       });
       return { result };
     } catch (e) {
@@ -63,16 +64,17 @@ const itemsQuery = ({ connects, model }) => {
 
       if (result) {
         try {
+          let supId = await getSupId({ data });
           const Item = model.ItemModel;
           const res = await Item.update(
             {
               name: data.name,
               description: data.description,
-              supid: data.supid,
               price: data.price,
               quantity: data.quantity,
               itemStatus: data.itemStatus,
               barcode: data.barcode,
+              supid: supId.rows[0].supid,
             },
             {
               where: { id: data.id },
@@ -140,6 +142,27 @@ const itemsQuery = ({ connects, model }) => {
         });
       });
       return result;
+    } catch (e) {
+      console.log("Error: ", e);
+    }
+  }
+
+  async function getSupId({ data }) {
+    try {
+      //Get supid from items table using supName sent by front end
+      const pool = await connects();
+      const result1 = await new Promise((resolve) => {
+        let sql = `SELECT supid FROM suppliers WHERE "supName" = $1`;
+        let params = [data.supName];
+        pool.query(sql, params, (err, res) => {
+          pool.end();
+
+          if (err) resolve(err);
+          resolve(res);
+        });
+      });
+
+      return result1;
     } catch (e) {
       console.log("Error: ", e);
     }

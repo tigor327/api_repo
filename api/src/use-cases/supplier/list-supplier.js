@@ -7,6 +7,9 @@ const listSuppliers = ({ suppliersDb }) => {
       suppliers.map((supplier) => supplierList.push(supplier));
     }
 
+
+    
+
     return supplierList;
   };
 };

@@ -6,7 +6,7 @@ const updateItem = ({ itemsDb, updateItem_ENTITY }) => {
       name: info.name,
       barcode: info.barcode,
       description: info.description,
-      supplier: info.supplier,
+      supName: info.supName,
       price: info.price,
       quantity: info.quantity,
       itemStatus: info.itemStatus,

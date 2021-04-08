@@ -55,6 +55,7 @@ const salesTransactionsQuery = ({ connects, model }) => {
       const pool = await connects();
       console.log("DATA ACCESS ITEMS QUERY: ", data);
       //add to salesTransaction Table
+
       const result = await new Promise((resolve) => {
         const sql = `INSERT INTO "salesTransactions" (custid, date, "grandTotal") VALUES ($1, $2, $3) RETURNING "salesTransactionId"`;
         let params = [data.custid, data.dateAndTime, data.transactionTotal];

@@ -13,7 +13,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        let sql = `SELECT * FROM "deliveryTransactions"`;
+        let sql = `SELECT * FROM "deliveryTransactions" a INNER JOIN "suppliers" b ON a.supid = b.supid`;
         pool.query(sql, (err, res) => {
           pool.end();
 
@@ -31,7 +31,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
     try {
       const pool = await connects();
       const result = await new Promise((resolve) => {
-        let sql = `SELECT a.*, b."name", b.barcode, b.description, b.price, c."supName" FROM "itemSales" a INNER JOIN "items" b ON a."id" = b."id" INNER JOIN "suppliers" c ON b.supid = c.supid WHERE a."salesTransactionId" = $1`;
+        let sql = `SELECT a.*, b."name", b.barcode, b.description, b.price, c."supName" FROM "itemDeliveries" a INNER JOIN "items" b ON a."id" = b."id" INNER JOIN "suppliers" c ON b.supid = c.supid WHERE a."deliveryTransactionsId" = $1`;
         let params = [id];
         pool.query(sql, params, (err, res) => {
           pool.end();
@@ -50,7 +50,6 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
     var finalResult = [];
     try {
       const pool = await connects();
-      //console.log("DATA ACCESS ITEMS QUERY: ", data);
       //add to deliveryTransaction Table
       const result = await new Promise((resolve) => {
         const sql = `INSERT INTO "deliveryTransactions" (supid, "deliveryDate", date, "grandTotal") VALUES ($1, $2, $3, $4) RETURNING "deliveryTransactionId"`;
@@ -82,6 +81,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
               result.rows[0].deliveryTransactionId,
               data.items.items[i].subTotal,
             ];
+
             pool.query(sql, params, (err, res) => {
               //pool.end();
               if (err) resolve(err);
@@ -271,6 +271,27 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
           console.log("Error: ", e);
         }
       }
+    } catch (e) {
+      console.log("Error: ", e);
+    }
+  }
+
+  async function getSupId({ data }) {
+    try {
+      //Get supid from items table using supName sent by front end
+      const pool = await connects();
+      const result1 = await new Promise((resolve) => {
+        let sql = `SELECT supid FROM suppliers WHERE "supName" = $1`;
+        let params = [data.supName];
+        pool.query(sql, params, (err, res) => {
+          pool.end();
+
+          if (err) resolve(err);
+          resolve(res);
+        });
+      });
+
+      return result1;
     } catch (e) {
       console.log("Error: ", e);
     }

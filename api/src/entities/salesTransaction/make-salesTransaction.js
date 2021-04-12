@@ -10,25 +10,19 @@ const makeSalesTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
 
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-  if (!info[0].salesDetails) {
-    throw new Error(
-      "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
-    );
+  console.log("SALES DETAILS ERROR INFO SENT: ", info);
+  if (!info) {
+    throw new Error("Missing inputs or Incorect Format");
   }
-  if (!info[1].items) {
-    throw new Error(
-      "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
-    );
+  if (info.itemsList.length < 1) {
+    throw new Error("Missing inputs or Incorect Format");
   }
-  var custid = info[0].salesDetails[0].custid;
-  const items = info[1];
-  const transactionTotal = info[0].salesDetails[1].grandTotal;
+  var custName = info.custName;
+  const items = info.itemsList;
+  const transactionTotal = info.grandTotal;
   //const { custid, transactionTotal, items } = info;
-  console.log(
-    "ENTITIES VALIDATION OF SALESTRANSACTION: ",
-    info[0].salesDetails[0].custid
-  );
-  if (!custid) {
+
+  if (!custName) {
     custid = 1;
   }
   if (!transactionTotal) {

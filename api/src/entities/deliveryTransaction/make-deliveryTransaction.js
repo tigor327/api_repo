@@ -10,29 +10,28 @@ const makeDeliveryTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
 
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-  if (!info[0].deliveryDetails) {
+  if (!info) {
     throw new Error(
       "please send JSON as [{'deliveryDetails': [{'supid': #}, {'deliveryDate': 'mm-dd-yyy'}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
     );
   }
-  if (!info[1].items) {
+  if (!info.itemsList) {
     throw new Error(
       "please send JSON as [{'deliveryDetails': [{'supid': #}, {'deliveryDate': 'mm-dd-yyy'}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
     );
   }
-  console.log(info[0].deliveryDetails[0].supid);
-  var supid = info[0].deliveryDetails[0].supid;
-  const deliveryDate = info[0].deliveryDetails[1].deliveryDate;
-  const items = info[1];
-  const totalPrice = info[0].deliveryDetails[2].grandTotal;
+  var supName = info.supName;
+  const deliveryDate = info.deliveryDate;
+  const items = info.itemsList;
+  const totalPrice = info.grandTotal;
   //const { custid, totalPrice, items } = info;
   console.log(
     "INFO FROM ENTITIES/DELIVERYTRANSACTION/MAKEDELIVERYTRANSACTION: ",
-    info[1].items
+    info.itemsList
   );
 
-  if (!supid) {
-    supid = 1;
+  if (!supName) {
+    supName = 1;
   }
   if (!totalPrice) {
     throw new Error("Please enter contact information");
@@ -42,7 +41,7 @@ const makeDeliveryTransaction = ({ info }) => {
   }
 
   return Object.freeze({
-    supid: () => supid,
+    supName: () => supName,
     totalPrice: () => totalPrice,
     items: () => items,
     dateAndTime: () => dateAndTime,

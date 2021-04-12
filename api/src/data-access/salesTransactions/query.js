@@ -33,7 +33,7 @@ const salesTransactionsQuery = ({ connects, model }) => {
       const pool = await connects();
 
       const result = await new Promise((resolve) => {
-        let sql = `SELECT a.*, b."name", b.barcode, b.description, b.price, c."supName" FROM "itemSales" a INNER JOIN "items" b ON a."id" = b."id" INNER JOIN "suppliers" c ON b.supid = c.supid WHERE a."salesTransactionId" = $1 `;
+        let sql = `SELECT a.*, b."name", b.barcode, b.description, b.price, c."supName" FROM "itemSales" a INNER JOIN "items" b ON a."id" = b."id" INNER JOIN "suppliers" c ON b.supid = c.supid WHERE a."salesTransactionId" = $1 ORDER BY "salesTransactionId"`;
         let params = [id];
         pool.query(sql, params, (err, res) => {
           pool.end();
@@ -42,7 +42,6 @@ const salesTransactionsQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-      console.log("THE RESULTS OF THE QUERY: ", result);
       return result;
     } catch (e) {
       console.log("Error: ", e);
@@ -52,64 +51,49 @@ const salesTransactionsQuery = ({ connects, model }) => {
   async function addSalesTransaction({ data }) {
     var finalResult = [];
     try {
-      const pool = await connects();
-      console.log("DATA ACCESS ITEMS QUERY: ", data);
-      //add to salesTransaction Table
-
-      const result = await new Promise((resolve) => {
-        const sql = `INSERT INTO "salesTransactions" (custid, date, "grandTotal") VALUES ($1, $2, $3) RETURNING "salesTransactionId"`;
-        let params = [data.custid, data.dateAndTime, data.transactionTotal];
-        pool.query(sql, params, (err, res) => {
-          pool.end();
-          if (err) resolve(err);
-          resolve(res);
-        });
-      });
-
-      finalResult.push(result.rows);
-      //console.log(result);
-
-      //add itemSales data
       try {
         const pool = await connects();
-        //console.log("DATA ACCESS ITEMS QUERY: ", data);
-        for (var i = 0; i < data.items.items.length; i++) {
-          const result1 = await new Promise((resolve) => {
-            const sql = `INSERT INTO "itemSales" (id, quantity, "salesTransactionId", "subTotal") VALUES ($1, $2, $3, $4) RETURNING id, quantity, "subTotal"`;
-            let params = [
-              data.items.items[i].id,
-              data.items.items[i].quantity,
-              result.rows[0].salesTransactionId,
-              data.items.items[i].subTotal,
-            ];
-            pool.query(sql, params, (err, res) => {
-              //pool.end();
-              if (err) resolve(err);
-              resolve(res);
-            });
+        //add to salesTransaction Table
+
+        const resultId = await new Promise((resolve) => {
+          const sql = `SELECT custid FROM customers WHERE "custName" = $1`;
+          let params = [data.custName];
+          pool.query(sql, params, (err, res) => {
+            if (err) resolve(err);
+            resolve(res);
           });
-          finalResult.push(result1.command, result1.rows);
+        });
 
-          //const result2 = updateItemQuantity({ data, i });
-          //finalResult.push(result2.command, result2.rows);
-          // console.log(
-          //   "AFTER CALLING FUNCTION RESULT2!!!!!!!!!!!!!!!!!#$^@#$^%#@$%#^#@$^%#@$%#@$^%#@$^: ",
-          //   result2
-          // );
+        console.log("DATA ACCESS ITEMS QUERY: ", resultId);
+        //add to salesTransaction Table
 
-          try {
-            //Update item Quantity
-            const pool = await connects();
-            const result2 = await new Promise((resolve) => {
-              const sql = `UPDATE "items" SET quantity = quantity - $1 WHERE id = $2 RETURNING name, price, quantity`;
-              // console.log(
-              //   "DATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: ",
-              //   data.items.items[0].quantity + "loop number: ",
-              //   i
-              // );
+        const result = await new Promise((resolve) => {
+          const sql = `INSERT INTO "salesTransactions" (custid, date, "grandTotal") VALUES ($1, $2, $3) RETURNING "salesTransactionId"`;
+          let params = [
+            resultId.rows[0].custid,
+            data.dateAndTime,
+            data.transactionTotal,
+          ];
+          pool.query(sql, params, (err, res) => {
+            pool.end();
+            if (err) resolve(err);
+            resolve(res);
+          });
+        });
+
+        finalResult.push(result.rows);
+        //add itemSales data
+        try {
+          const pool = await connects();
+          console.log("DATA ACCESS ITEMS QUERY: ", data);
+          for (var i = 0; i < data.items.length; i++) {
+            const result1 = await new Promise((resolve) => {
+              const sql = `INSERT INTO "itemSales" (id, quantity, "salesTransactionId", "subTotal") VALUES ($1, $2, $3, $4) RETURNING id, quantity, "subTotal"`;
               let params = [
-                data.items.items[i].quantity,
-                data.items.items[i].id,
+                data.items[i].id,
+                data.items[i].selectedQuantity,
+                result.rows[0].salesTransactionId,
+                data.items[i].subTotal,
               ];
               pool.query(sql, params, (err, res) => {
                 //pool.end();
@@ -117,20 +101,50 @@ const salesTransactionsQuery = ({ connects, model }) => {
                 resolve(res);
               });
             });
-            finalResult.push(result2.command, result2.rows);
+            finalResult.push(result1.command, result1.rows);
 
-            //console.log(result2);
-            //return { result };
-          } catch (e) {
-            console.log("Error: ", e);
+            //const result2 = updateItemQuantity({ data, i });
+            //finalResult.push(result2.command, result2.rows);
+            // console.log(
+            //   "AFTER CALLING FUNCTION RESULT2!!!!!!!!!!!!!!!!!#$^@#$^%#@$%#^#@$^%#@$%#@$^%#@$^: ",
+            //   result2
+            // );
+
+            try {
+              //Update item Quantity
+              const pool = await connects();
+              const result2 = await new Promise((resolve) => {
+                const sql = `UPDATE "items" SET quantity = quantity - $1 WHERE id = $2 RETURNING name, price, quantity`;
+                // console.log(
+                //   "DATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: ",
+                //   data,
+                //   i
+                // );
+                let params = [data.items[i].selectedQuantity, data.items[i].id];
+                pool.query(sql, params, (err, res) => {
+                  //pool.end();
+                  if (err) resolve(err);
+                  resolve(res);
+                });
+              });
+              finalResult.push(result2.command, result2.rows);
+
+              //console.log(result2);
+              //return { result };
+            } catch (e) {
+              console.log("Error: ", e);
+            }
           }
+          //return { result };
+
+          //console.log(finalResult);
+          return { finalResult };
+        } catch (e) {
+          console.log("Error: ", e);
         }
-        //return { result };
       } catch (e) {
         console.log("Error: ", e);
       }
-      console.log(finalResult);
-      return { finalResult };
     } catch (e) {
       console.log("Error: ", e);
     }

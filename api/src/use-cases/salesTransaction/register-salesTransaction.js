@@ -13,15 +13,12 @@ const registerSalesTransaction = ({
 
     let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
     let data = await makeSalesTransaction_ENTITY({ info });
-    const custid = info[0].salesDetails[0].custid;
-    const items = info[1];
-    const transactionTotal = info[0].salesDetails[1].grandTotal;
-    console.log(
-      "LOG FROM USECASES-SALESTRANSACTION-REGISTER: ",
-      info[0].salesDetails[0]
-    );
+    const custName = info.custName;
+    const items = info.itemsList;
+    const transactionTotal = info.grandTotal;
+
     data = {
-      custid: custid,
+      custName: custName,
       transactionTotal: transactionTotal,
       items: items,
       dateAndTime: dateAndTime,

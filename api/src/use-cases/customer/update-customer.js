@@ -11,7 +11,7 @@ const updateCustomer = ({ customersDb, updateCustomer_ENTITY }) => {
     };
 
     const res = await customersDb.updateCustomer({ data });
-
+    console.log("RESPONSE: ", res);
     let prompt = res
       ? "Customer updated succesfully!"
       : "Failed to update customer.";

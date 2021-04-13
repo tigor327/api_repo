@@ -188,6 +188,11 @@ const salesTransactionsQuery = ({ connects, model }) => {
   async function updateSalesTransaction({ data }) {
     var finalResult = [];
     try {
+      const id = await getCustId(data.id);
+      console.log(
+        "IDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDIDDDDDDDDDDDDDDDDIDDDDDDDDDIDIDIDIDIDIDIDIDIDIDDIIDDIDIDIDIDIDDIDIDIDIDIDIDIDIDIDIDIDIDIDIDID: ",
+        id
+      );
       const pool = await connects();
       const result = await new Promise((resolve) => {
         let sql = `UPDATE "salesTransactions" SET "custid" = $2, date = $3, "grandTotal" = $4  WHERE "salesTransactionId" = $1`;
@@ -298,6 +303,25 @@ const salesTransactionsQuery = ({ connects, model }) => {
           console.log("Error: ", e);
         }
       }
+    } catch (e) {
+      console.log("Error: ", e);
+    }
+  }
+  async function getCustId({ id }) {
+    try {
+      const pool = await connects();
+
+      const result = await new Promise((resolve) => {
+        let sql = `SELECT custid FROM "salesTransactions" a INNER JOIN customers b ON a.custid = b.custid`;
+        pool.query(sql, (err, res) => {
+          pool.end();
+
+          if (err) resolve(err);
+          resolve(res);
+        });
+      });
+      console.log("THE RESULTS OF THE QUERY: ", result);
+      return result;
     } catch (e) {
       console.log("Error: ", e);
     }

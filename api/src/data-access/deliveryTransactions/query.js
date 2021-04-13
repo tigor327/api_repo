@@ -45,9 +45,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       console.log("Error: ", e);
     }
   }
-
-  async function addDeliveryTransaction({ data }) {
-    var finalResult = [];
+  async function getId({ data }) {
     try {
       const pool = await connects();
       //add to deliveryTransaction Table
@@ -55,19 +53,27 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
         const sql = `SELECT supid FROM suppliers WHERE "supName" = $1`;
         let params = [data.supName];
         pool.query(sql, params, (err, res) => {
+          pool.end();
           if (err) resolve(err);
           resolve(res);
         });
       });
+      return result1.rows[0].supid;
+    } catch (e) {
+      console.log("Error: ", e);
+    }
+  }
+
+  async function addDeliveryTransaction({ data }) {
+    var finalResult = [];
+    try {
+      const pool = await connects();
+      let id = await getId({ data });
+      console.log("PARAMS AFTER GETTING ID USING ASYNC FUNCTION: ", id);
 
       const result = await new Promise((resolve) => {
         const sql = `INSERT INTO "deliveryTransactions" (supid, "deliveryDate", date, "grandTotal") VALUES ($1, $2, $3, $4) RETURNING "deliveryTransactionId"`;
-        let params = [
-          result1.rows[0].supid,
-          data.deliveryDate,
-          data.dateAndTime,
-          data.totalPrice,
-        ];
+        let params = [id, data.deliveryDate, data.dateAndTime, data.totalPrice];
         pool.query(sql, params, (err, res) => {
           pool.end();
           if (err) resolve(err);
@@ -169,20 +175,17 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
     var finalResult = [];
     try {
       console.log("DISPLAY DATA BEING PASSED BEFORE EXECUTING QUERY: ", data);
+      let id = await getId({ data });
       const pool = await connects();
       const result = await new Promise((resolve) => {
         let sql = `UPDATE "deliveryTransactions" SET "supid" = $2, "deliveryDate" = $3, date = $4, "grandTotal" = $5  WHERE "deliveryTransactionId" = $1`;
         let params = [
           data.id,
-          data.supid,
+          id,
           data.deliveryDate,
           data.dateAndTime,
           data.totalPrice,
         ];
-        console.log(
-          "ASDFASDFSADFSADFASDFASDFASDFASDFASDFSADFSADFASDFASDFASDFASDFASDFSADFSADFASDFASDFASDF: ",
-          params
-        );
 
         pool.query(sql, params, (err, res) => {
           pool.end();
@@ -195,25 +198,22 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       if (result) {
         try {
           const pool = await connects();
-          console.log("DATA ACCESS ITEMS QUERY: ", data.items.items[0]);
-          for (var i = 0; i < data.items.items.length; i++) {
+          for (var i = 0; i < data.items.length; i++) {
             const result1 = await new Promise((resolve) => {
-              const sql = `UPDATE "itemDeliveries" SET quantity = quantity - $2, "subTotal" = $4 WHERE id = $1 AND "deliveryTransactionsId" = $3 returning quantity`;
+              const sql = `UPDATE "itemDeliveries" SET quantity = quantity - $2, "subTotal" = $4 WHERE id = $3 AND "deliveryTransactionsId" = $1 returning quantity`;
 
               let params = [
-                data.items.items[i].id,
-                data.items.items[i].quantity,
                 data.id,
-                data.items.items[i].subTotal,
+                data.items[i].selectedQuantity,
+                data.items[i].id,
+                data.items[i].subTotal,
               ];
-
               pool.query(sql, params, (err, res) => {
                 //pool.end();
                 if (err) resolve(err);
                 resolve(res);
               });
             });
-
             finalResult.push(result1.command, result1.rows);
 
             //const result2 = updateItemQuantity({ data, i });
@@ -233,36 +233,41 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
                 //   data.items.items[i].quantity + "loop number: ",
                 //   i
                 // );
-                console.log("DATA PASSED BEFORE INSERT: ", result1.rows);
-                let params = [result1.rows[0].quantity, data.items.items[i].id];
+                let params = [result1.rows[i].quantity, data.items[i].id];
+
                 pool.query(sql, params, (err, res) => {
                   //pool.end();
                   if (err) resolve(err);
                   resolve(res);
                 });
               });
-              //console.log("DATAAAA FROM QUERY DELIVERYTRANSACTION : ", result2);
+              console.log(
+                "DATAAAA FROM QUERY DELIVERYTRANSACTION : ",
+                result1.rows[i].quantity
+              );
               finalResult.push(result2.command, result2.rows);
               try {
                 const result3 = await new Promise((resolve) => {
                   const sql = `UPDATE "itemDeliveries" SET quantity = $2, "subTotal" = $4 WHERE id = $1 AND "deliveryTransactionsId" = $3 RETURNING id, quantity`;
 
                   let params = [
-                    data.items.items[i].id,
-                    data.items.items[i].quantity,
+                    data.items[i].id,
+                    data.items[i].selectedQuantity,
                     data.id,
-                    data.items.items[i].subTotal,
+                    data.items[i].subTotal,
                   ];
-                  // console.log(
-                  //   "DATAAAA FROM QUERY DELIVERYTRANSACTION DATAACCESS: ",
-                  //   params
-                  // );
+                  console.log(
+                    "DATAAAA FROM QUERY DELIVERYTRANSACTION DATAACCESS: ",
+                    params
+                  );
                   pool.query(sql, params, (err, res) => {
                     //pool.end();
                     if (err) resolve(err);
                     resolve(res);
                   });
                 });
+                //console.log("UPDATE QUANTITY RETURN: ", result3);
+
                 finalResult.push(result3.command, result3.rows);
               } catch (e) {
                 console.log("Error: ", e);

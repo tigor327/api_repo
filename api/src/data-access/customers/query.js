@@ -41,7 +41,7 @@ const customerQuery = ({ connects, model }) => {
     }
   }
 
-  async function updateCustomer({ data }) {
+  async function getCustomerById({ data }) {
     try {
       const pool = await connects();
 
@@ -56,29 +56,35 @@ const customerQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-
-      if (result) {
-        try {
-          const Customer = model.CustomerModel;
-          const result = await Customer.update(
-            {
-              custName: data.custName,
-              custContact: data.custContact,
-              custAddress: data.custAddress,
-              custStatus: data.custStatus,
-            },
-            {
-              where: { custid: data.id },
-            }
-          );
-          console.log("RESULT is NOT EMPTY", data);
-          return { result };
-        } catch (e) {
-          console.log("Error: ", e);
-        }
-      }
+      return result.rows;
     } catch (e) {
       console.log("Error: ", e);
+    }
+  }
+
+  async function updateCustomer({ data }) {
+    let checkExist = await getCustomerById({ data });
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: ", checkExist);
+    if (checkExist) {
+      try {
+        const Customer = model.CustomerModel;
+        const result = await Customer.update(
+          {
+            custName: data.custName,
+            custContact: data.custContact,
+            custAddress: data.custAddress,
+            custStatus: data.custStatus,
+          },
+          {
+            where: { custid: data.id },
+          }
+        );
+        //console.log("RESULT is NOT EMPTY", result1.rows);
+        let customer = await getCustomerById({ data });
+        return customer;
+      } catch (e) {
+        console.log("Error: ", e);
+      }
     }
   }
 

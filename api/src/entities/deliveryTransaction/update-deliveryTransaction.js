@@ -8,14 +8,17 @@ const updateDeliveryTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
 
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-  console.log(info[0].deliveryDetails[0].supid);
-  const supid = info[0].deliveryDetails[0].supid;
-  const deliveryDate = info[0].deliveryDetails[1].deliveryDate;
-  const items = info[1];
-  const totalPrice = info[0].deliveryDetails[2].grandTotal;
+  console.log(
+    "ENTITIES EEEEEWWWWEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE: ",
+    info
+  );
+  const supName = info.supName;
+  const deliveryDate = info.deliveryDate;
+  const items = info.itemsList;
+  const totalPrice = info.grandTotal;
   //const { custid, totalPrice, items } = info;
 
-  if (!supid) {
+  if (!supName) {
     throw new Error("Please enter full name");
   }
   if (!totalPrice) {
@@ -29,7 +32,7 @@ const updateDeliveryTransaction = ({ info }) => {
   }
 
   return Object.freeze({
-    supid: () => supid,
+    supName: () => supName,
     totalPrice: () => totalPrice,
     items: () => items,
     dateAndTime: () => dateAndTime,

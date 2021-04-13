@@ -41,7 +41,7 @@ const supplierQuery = ({ connects, model }) => {
     }
   }
 
-  async function updateSupplier({ data }) {
+  async function getSupplierById({ data }) {
     try {
       const pool = await connects();
 
@@ -56,28 +56,33 @@ const supplierQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-
-      if (result) {
-        try {
-          const Supplier = model.SupplierModel;
-          const result = await Supplier.update(
-            {
-              supName: data.supName,
-              supContact: data.supContact,
-              supAddress: data.supAddress,
-              supStatus: data.supStatus,
-            },
-            {
-              where: { supid: data.id },
-            }
-          );
-          return { result };
-        } catch (e) {
-          console.log("Error: ", e);
-        }
-      }
+      return result.rows;
     } catch (e) {
       console.log("Error: ", e);
+    }
+  }
+
+  async function updateSupplier({ data }) {
+    let sup = await getSupplierById({ data });
+    if (sup) {
+      try {
+        const Supplier = model.SupplierModel;
+        const result = await Supplier.update(
+          {
+            supName: data.supName,
+            supContact: data.supContact,
+            supAddress: data.supAddress,
+            supStatus: data.supStatus,
+          },
+          {
+            where: { supid: data.id },
+          }
+        );
+        sup = await getSupplierById({ data });
+        return { sup };
+      } catch (e) {
+        console.log("Error: ", e);
+      }
     }
   }
 

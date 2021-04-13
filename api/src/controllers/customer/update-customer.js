@@ -27,7 +27,7 @@ const updateCustomerById = ({ updateCustomerUseCase }) => {
       };
     } catch (e) {
       // TODO: Error logging
-      console.log(e);
+      console.log("ERROR MESSAGE: ", e);
       return {
         headers,
         statusCode: 400,

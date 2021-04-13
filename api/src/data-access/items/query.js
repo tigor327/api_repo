@@ -45,49 +45,57 @@ const itemsQuery = ({ connects, model }) => {
       console.log("Error: ", e);
     }
   }
-
-  async function updateItem({ data }) {
+  async function getItemById({ data }) {
     try {
       const pool = await connects();
-
       const result = await new Promise((resolve) => {
         let sql = `SELECT * FROM items WHERE id = $1`;
         let params = [data.id];
 
         pool.query(sql, params, (err, res) => {
           pool.end();
-
           if (err) resolve(err);
           resolve(res);
         });
       });
 
-      if (result) {
-        try {
-          let supId = await getSupId({ data });
-          const Item = model.ItemModel;
-          const res = await Item.update(
-            {
-              name: data.name,
-              description: data.description,
-              price: data.price,
-              quantity: data.quantity,
-              itemStatus: data.itemStatus,
-              barcode: data.barcode,
-              supid: supId.rows[0].supid,
-            },
-            {
-              where: { id: data.id },
-            }
-          );
-
-          return { res };
-        } catch (e) {
-          console.log("Error: ", e);
-        }
-      }
+      return result.rows;
     } catch (e) {
       console.log("Error: ", e);
+    }
+  }
+
+  async function updateItem({ data }) {
+    let item = await getItemById({ data });
+
+    if (item) {
+      try {
+        let supId = await getSupId({ data });
+        console.log(
+          "--a-a-a-a-a-a-a-a-a----------------------------------aa--------------aa: ",
+          supId
+        );
+        const Item = model.ItemModel;
+        const res = await Item.update(
+          {
+            name: data.name,
+            description: data.description,
+            price: data.price,
+            quantity: data.quantity,
+            itemStatus: data.itemStatus,
+            barcode: data.barcode,
+            supid: supId.rows[0].supid,
+          },
+          {
+            where: { id: data.id },
+          }
+        );
+        item = await getItemById({ data });
+
+        return { item };
+      } catch (e) {
+        console.log("Error: ", e);
+      }
     }
   }
 

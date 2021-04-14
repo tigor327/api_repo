@@ -10,11 +10,11 @@ const makeSupplier = ({ info }) => {
   if (!supName) {
     throw new Error("Please enter full name");
   }
-  if (!supContact || supContact.trim().length === 0) {
-    throw new Error("Please enter contact information");
-  }
   if (!supAddress || supAddress.trim().length === 0) {
     throw new Error("Please enter address");
+  }
+  if (!supContact || supContact.trim().length === 0) {
+    throw new Error("Please enter correct contact information");
   }
   if (!fname) {
     throw new Error("Invalid chars aren't allowed as name");

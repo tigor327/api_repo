@@ -10,11 +10,11 @@ const makeCustomer = ({ info }) => {
   if (!custName) {
     throw new Error("Please enter full name");
   }
-  if (!custContact || custContact.trim().length === 0) {
-    throw new Error("Please enter contact information");
-  }
   if (!custAddress || custAddress.trim().length === 0) {
     throw new Error("Please enter address");
+  }
+  if (!custContact || custContact.trim().length === 0) {
+    throw new Error("Please enter contact information");
   }
   if (!fname) {
     throw new Error("Invalid chars aren't allowed as name");

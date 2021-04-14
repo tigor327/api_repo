@@ -79,7 +79,8 @@ const supplierQuery = ({ connects, model }) => {
           }
         );
         sup = await getSupplierById({ data });
-        return { sup };
+
+        return sup;
       } catch (e) {
         console.log("Error: ", e);
       }

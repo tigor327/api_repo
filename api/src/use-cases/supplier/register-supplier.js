@@ -18,7 +18,7 @@ const registerSupplier = ({ suppliersDb, makeSupplier_ENTITY }) => {
     let prompt = res
       ? "Supplier registered succesfully!"
       : "Failed to register supplier.";
-
+    console.log("c==|;;;;;;;;;;;> RegSup-UseCase", res);
     return {
       message: prompt,
       product: res,

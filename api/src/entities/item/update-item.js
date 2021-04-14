@@ -17,6 +17,9 @@ const updateItem_ENTITY = ({ info }) => {
   if (!name) {
     throw new Error("Item name can't be blank!");
   }
+  if (!supName) {
+    throw new Error("supplier name can't be blank!");
+  }
   if (!barcode) {
     throw new Error("Provide an item barcode.");
   }

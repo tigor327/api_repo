@@ -14,8 +14,9 @@ const updateItem = ({ itemsDb, updateItem_ENTITY }) => {
     };
 
     const res = await itemsDb.updateItem({ data });
+    console.log("response to front end: ", res);
     let prompt = "";
-    if (res.res == 1) {
+    if (res) {
       prompt = "Item updated succesfully!";
     } else {
       prompt = "Failed to update item.";

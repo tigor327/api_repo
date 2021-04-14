@@ -13,11 +13,10 @@ const registerDeliveryTransaction = ({
 
     let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
     let data = await makeDeliveryTransaction_ENTITY({ info });
-
-    const deliveryDate = info.deliveryDate;
-    const supName = info.supName;
-    const items = info.itemsList;
-    const totalPrice = info.grandTotal;
+    const deliveryDate = data.deliveryDate;
+    const supName = data.supName;
+    const items = data.items;
+    const totalPrice = data.totalPrice;
     //console.log("LOG FROM USECASES-SALESTRANSACTION-REGISTER: ", items);
     data = {
       supName: supName,
@@ -26,6 +25,7 @@ const registerDeliveryTransaction = ({
       dateAndTime: dateAndTime,
       deliveryDate: deliveryDate,
     };
+    console.log("DATA: ", data);
 
     const res = await deliveryTransactionsDb.addDeliveryTransaction({ data });
 

@@ -3,7 +3,6 @@ const listSalesTransactions = ({ salesTransactionsDb }) => {
     let salesTransactionList = [];
     const result = await salesTransactionsDb.getAllSalesTransactions({});
     const results = result.rows;
-
     for (var i = 0; i < result.rowCount; i++) {
       var row = results[i];
       var id = row.salesTransactionId;
@@ -14,6 +13,7 @@ const listSalesTransactions = ({ salesTransactionsDb }) => {
       salesTransactionList.push({
         custid: row.custid,
         date: row.date,
+        deliveryDate: row.deliveryDate,
         grandTotal: row.grandTotal,
         salesTransactionId: row.salesTransactionId,
         custName: row.custName,

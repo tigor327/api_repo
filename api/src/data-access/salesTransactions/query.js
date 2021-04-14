@@ -64,7 +64,6 @@ const salesTransactionsQuery = ({ connects, model }) => {
           });
         });
 
-        console.log("DATA ACCESS ITEMS QUERY: ", resultId);
         //add to salesTransaction Table
 
         const result = await new Promise((resolve) => {
@@ -85,7 +84,6 @@ const salesTransactionsQuery = ({ connects, model }) => {
         //add itemSales data
         try {
           const pool = await connects();
-          console.log("DATA ACCESS ITEMS QUERY: ", data);
           for (var i = 0; i < data.items.length; i++) {
             const result1 = await new Promise((resolve) => {
               const sql = `INSERT INTO "itemSales" (id, quantity, "salesTransactionId", "subTotal") VALUES ($1, $2, $3, $4) RETURNING id, quantity, "subTotal"`;
@@ -95,12 +93,15 @@ const salesTransactionsQuery = ({ connects, model }) => {
                 result.rows[0].salesTransactionId,
                 data.items[i].subTotal,
               ];
+              console.log("DATA ACCESS ITEMS QUERY: ", params);
               pool.query(sql, params, (err, res) => {
                 //pool.end();
                 if (err) resolve(err);
                 resolve(res);
               });
             });
+            console.log("DATA ACCESS ITEMS QUERY: ", result1);
+
             finalResult.push(result1.command, result1.rows);
 
             //const result2 = updateItemQuantity({ data, i });
@@ -137,7 +138,7 @@ const salesTransactionsQuery = ({ connects, model }) => {
           }
           //return { result };
 
-          //console.log(finalResult);
+          console.log(finalResult);
           return { finalResult };
         } catch (e) {
           console.log("Error: ", e);
@@ -320,7 +321,6 @@ const salesTransactionsQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-      console.log("THE RESULTS OF THE QUERY: ", result);
       return result;
     } catch (e) {
       console.log("Error: ", e);

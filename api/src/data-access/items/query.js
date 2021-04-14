@@ -66,9 +66,9 @@ const itemsQuery = ({ connects, model }) => {
   }
 
   async function updateItem({ data }) {
-    let item = await getItemById({ data });
+    let result = await getItemById({ data });
 
-    if (item) {
+    if (result) {
       try {
         let supId = await getSupId({ data });
         console.log(
@@ -90,9 +90,8 @@ const itemsQuery = ({ connects, model }) => {
             where: { id: data.id },
           }
         );
-        item = await getItemById({ data });
-
-        return { item };
+        result = await getItemById({ data });
+        return result;
       } catch (e) {
         console.log("Error: ", e);
       }
@@ -169,7 +168,7 @@ const itemsQuery = ({ connects, model }) => {
           resolve(res);
         });
       });
-
+      console.log("getSupId RESULTS: c===|:::::::::::::::::>", data.supName);
       return result1;
     } catch (e) {
       console.log("Error: ", e);

@@ -15,6 +15,7 @@ const updateSupplier = ({ suppliersDb, updateSupplier_ENTITY }) => {
     let prompt = res
       ? "Supplier updated succesfully!"
       : "Failed to update supplier.";
+    console.log("RESULT SENT TO FRONT res: ", res);
 
     return {
       message: prompt,

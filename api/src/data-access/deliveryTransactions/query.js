@@ -52,6 +52,10 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
       const result1 = await new Promise((resolve) => {
         const sql = `SELECT supid FROM suppliers WHERE "supName" = $1`;
         let params = [data.supName];
+        // console.log(
+        //   "dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa: ",
+        //   data
+        // );
         pool.query(sql, params, (err, res) => {
           pool.end();
           if (err) resolve(err);
@@ -69,7 +73,6 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
     try {
       const pool = await connects();
       let id = await getId({ data });
-      console.log("PARAMS AFTER GETTING ID USING ASYNC FUNCTION: ", id);
 
       const result = await new Promise((resolve) => {
         const sql = `INSERT INTO "deliveryTransactions" (supid, "deliveryDate", date, "grandTotal") VALUES ($1, $2, $3, $4) RETURNING "deliveryTransactionId"`;
@@ -96,7 +99,6 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
               result.rows[0].deliveryTransactionId,
               data.items[i].subTotal,
             ];
-            console.log("DATA ACCESS ITEMS QUERY: ", data.items[i].id);
 
             pool.query(sql, params, (err, res) => {
               //pool.end();
@@ -104,6 +106,7 @@ const deliveryTransactionsQuery = ({ connects, model }) => {
               resolve(res);
             });
           });
+          //console.log("DATA ACCESS ITEMS QUERY: ", result1);
 
           finalResult.push(result1.command, result1.rows);
 

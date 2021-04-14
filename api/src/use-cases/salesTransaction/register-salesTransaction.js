@@ -13,10 +13,10 @@ const registerSalesTransaction = ({
 
     let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
     let data = await makeSalesTransaction_ENTITY({ info });
-    const custName = info.custName;
-    const items = info.itemsList;
-    const transactionTotal = info.grandTotal;
 
+    const custName = data.custName;
+    const items = data.items;
+    const transactionTotal = data.transactionTotal;
     data = {
       custName: custName,
       transactionTotal: transactionTotal,

@@ -8,10 +8,7 @@ const updateDeliveryTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
 
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
-  console.log(
-    "ENTITIES EEEEEWWWWEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE: ",
-    info
-  );
+
   const supName = info.supName;
   const deliveryDate = info.deliveryDate;
   const items = info.itemsList;

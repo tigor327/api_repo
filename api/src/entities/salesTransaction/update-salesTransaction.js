@@ -11,18 +11,18 @@ const updateSalesTransaction = ({ info }) => {
   let min = today.getMinutes() < 10 ? "0" : "" + today.getMinutes();
   let dateAndTime = `${month}-${day}-${year} ${hour}:${min}`;
 
-  if (!info[0].salesDetails) {
+  if (!info) {
     throw new Error(
       "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
     );
   }
-  if (!info[1].items) {
+  if (!info.itemsList) {
     throw new Error(
       "please send JSON as [{'salesDetails': [{'custid': #}, {'grandTotal': #}]}, {'items': [{'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #}, {'id':#,'quantity':#, 'subTotal': #},...]}]"
     );
   }
 
-  const custid = info[0].salesDetails[0].custid;
+  const custid = info.custid;
   const items = info[1];
   const totalPrice = info[0].salesDetails[1].grandTotal;
 
